@@ -1,0 +1,9 @@
+package com.subrutin.catalog.dto;
+
+import com.fasterxml.jackson.databind.PropertyNamingStrategies;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
+
+import javax.validation.constraints.NotBlank;
+
+@JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
+public record CategoryCreateUpdateRecordDTO(@NotBlank String code, @NotBlank String name, String description) {}
